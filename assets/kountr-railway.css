@@ -1,0 +1,40 @@
+.railway-footer {
+  --rail-ink: #263e4a;
+  --carriage-width: clamp(200px, 22vw, 330px);
+  background: var(--paper);
+  color: var(--rail-ink);
+}
+.railway-scene { position: relative; height: clamp(460px, 44vw, 680px); overflow: clip; isolation: isolate; }
+.railway-bridge { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+.railway-window { position: absolute; inset: 0 0 60%; display: flex; align-items: flex-end; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; }
+.railway-window::-webkit-scrollbar { display: none; }
+.railway-train { display: flex; flex: 0 0 auto; align-items: flex-end; width: max-content; padding-left: 5vw; }
+.train-set { display: flex; flex: 0 0 auto; align-items: flex-end; gap: 18px; padding-right: 120px; }
+.train-engine { flex: 0 0 auto; width: calc(var(--carriage-width) * 1.13); margin-right: -16px; }
+.train-engine img { width: 100%; }
+.train-carriage { position: relative; display: block; flex: 0 0 var(--carriage-width); width: var(--carriage-width); padding-bottom: 27px; }
+.train-carriage::before { content: ""; position: absolute; bottom: 19px; right: 100%; width: 20px; height: 5px; background: var(--rail-ink); }
+.carriage-screen { position: relative; display: block; aspect-ratio: 1.65; border: 4px solid var(--rail-ink); border-radius: 2px; background: #fcfaf2; box-shadow: 0 2px 0 #b7c5bf; overflow: hidden; transition: border-color .2s ease; }
+.carriage-screen > img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .4s ease; }
+.carriage-caption { position: absolute; inset: auto 0 0; display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; background: #263e4a; color: #f2ede4; font-size: 11px; line-height: 1.2; }
+.carriage-chassis { position: absolute; left: -5px; right: -5px; bottom: 17px; height: 9px; background: #456675; border-top: 2px solid #acc1c3; border-radius: 2px; display: flex; justify-content: space-between; padding-inline: 19px; }
+.carriage-bogie { position: relative; top: 6px; display: flex; gap: 12px; height: 9px; border-radius: 4px; background: #263e4a; }
+.carriage-bogie i { display: block; width: 22px; height: 22px; margin-top: -4px; border: 3px solid #263e4a; border-radius: 50%; background: radial-gradient(circle, #b1c1be 0 24%, #48636e 28% 55%, #7e949a 60%); box-shadow: 0 1px 0 #172b35; }
+.train-carriage:hover .carriage-screen { border-color: #789da8; }
+.train-carriage:hover .carriage-screen > img { transform: scale(1.025); }
+.train-carriage:focus-visible { outline: 2px solid #3d6677; outline-offset: 5px; }
+.railway-window:focus-visible { outline: 2px solid #789da8; outline-offset: -3px; }
+.railway-signature { position: absolute; bottom: 9%; left: 50%; transform: translateX(-50%); margin: 0; font-size: clamp(12px, 1.25vw, 17px); letter-spacing: -.035em; white-space: nowrap; }
+.railway-toggle { position: absolute; z-index: 2; top: 12px; right: var(--gutter); display: inline-flex; gap: 12px; align-items: center; min-height: 44px; padding: 8px 0 8px 12px; border: 0; background: var(--paper); color: #63766e; font-size: 11px; }
+.railway-toggle:hover { color: var(--rail-ink); }
+@media (width <= 699px) {
+  .railway-footer { --carriage-width: 220px; }
+  .railway-scene { height: 460px; }
+  .railway-bridge { width: 900px; max-width: none; left: calc(50% - 450px); }
+  .railway-signature { bottom: 10%; }
+  .train-set { padding-right: 70px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carriage-screen, .carriage-screen > img { transition: none; }
+  .train-carriage:hover .carriage-screen > img { transform: none; }
+}

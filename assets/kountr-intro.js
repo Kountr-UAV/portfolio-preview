@@ -6,7 +6,7 @@
 
   const skip = intro.querySelector('[data-intro-skip]');
   const previousFocus = document.activeElement;
-  const content = [...document.querySelectorAll('.skip-link, .site-header, main, .site-footer')]
+  const content = [...document.querySelectorAll('.skip-link, .site-header, main, .site-footer, .railway-footer')]
     .filter(element => !element.inert);
   let leaveTimer;
   let finishTimer;

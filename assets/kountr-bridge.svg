@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 620" fill="none">
+  <defs>
+    <linearGradient id="stone" x1="720" y1="252" x2="720" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#789da8"/><stop offset="1" stop-color="#4c6b76"/></linearGradient>
+    <linearGradient id="arch" x1="720" y1="270" x2="720" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#9db9bf"/><stop offset="1" stop-color="#789da8"/></linearGradient>
+    <mask id="openings"><path fill="white" d="M0 266h1440v354H0z"/>
+      <path fill="black" d="M190 620Q720 -30 1250 620Z"/>
+      <path fill="black" d="M170 530V316a25 25 0 0 1 50 0v154zm100-110V316a25 25 0 0 1 50 0v58zm100-75v-29a25 25 0 0 1 50 0zm680 0v-29a25 25 0 0 1 50 0v65zm100 74V316a25 25 0 0 1 50 0v154zm100 111V316a25 25 0 0 1 50 0v214z"/>
+    </mask>
+  </defs>
+  <!-- Quiet contours in the valley. -->
+  <path d="M0 560q250-145 450 12t460-12 530-20" stroke="#cbd1c2" stroke-width="1"/>
+  <path d="M0 588q250-145 450 12t460-12 530-20" stroke="#d8dacd" stroke-width="1"/>
+  <!-- Deck, rail and arched masonry. -->
+  <path d="M0 268h1440v352H0z" fill="url(#stone)" mask="url(#openings)"/>
+  <path d="M175 640Q720 -60 1265 640" stroke="#3b5864" stroke-width="44"/>
+  <path d="M175 620Q720 -60 1265 620" stroke="url(#arch)" stroke-width="30"/>
+  <path d="M175 606Q720 -73 1265 606" stroke="#c0d0cc" stroke-width="2"/>
+  <path d="M0 248h1440v22H0z" fill="#587987"/>
+  <path d="M0 249h1440" stroke="#b9cfce" stroke-width="5"/>
+  <path d="M0 273h1440" stroke="#3c5c68" stroke-width="7"/>
+  <path d="M0 244h1440" stroke="#273f4b" stroke-width="4"/>
+  <path d="M0 253h1440" stroke="#d3dbcf" stroke-width="2"/>
+  <!-- Layered, faceted hills frame the crossing. -->
+  <path d="M0 155 45 171 90 251 128 271 171 407 243 620H0z" fill="#a3ad92"/>
+  <path d="m0 155 45 16 27 240L31 620H0z" fill="#bbc1a9"/>
+  <path d="m45 171 45 80 38 20-14 218 83 131H31l41-209z" fill="#87977d"/>
+  <path d="m128 271 43 136 72 213h-46l-83-131z" fill="#677d6b"/>
+  <path d="m0 405 83 53 31 31 83 131H0z" fill="#6f826e"/>
+  <path d="m0 405 40 140 74-56-31-31z" fill="#94a087"/>
+  <path d="m1440 157-55 26-42 70-42 25-36 147-68 195h243z" fill="#a3ad92"/>
+  <path d="m1440 157-55 26-25 214 42 223h38z" fill="#c0c6ad"/>
+  <path d="m1385 183-42 70-42 25 18 221-72 121h155l-42-223z" fill="#8b9a7e"/>
+  <path d="m1301 278-36 147-68 195h50l72-121z" fill="#687d68"/>
+  <path d="m1440 420-83 41-38 38-72 121h193z" fill="#78896f"/>
+  <path d="m1440 420-38 136-83-57 38-38z" fill="#a8b193"/>
+</svg>

@@ -13,8 +13,10 @@
     if (browser.open) browser.close();
   }
 
-  document.querySelectorAll('a[data-portfolio]').forEach(link => {
-    link.addEventListener('click', event => {
+  // Delegate so the carousel's repeated cards open the same previews.
+  document.addEventListener('click', event => {
+      const link = event.target.closest?.('a[data-portfolio]');
+      if (!link) return;
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       opener = link;
@@ -25,7 +27,6 @@
       browser.showModal();
       root.classList.add('portfolio-open');
       closeButton.focus({ preventScroll: true });
-    });
   });
 
   closeButton.addEventListener('click', close);

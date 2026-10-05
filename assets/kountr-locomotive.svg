@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 190" fill="none">
+  <defs><linearGradient id="body" x1="180" y1="65" x2="180" y2="153" gradientUnits="userSpaceOnUse"><stop stop-color="#86acb8"/><stop offset="1" stop-color="#4c788c"/></linearGradient><linearGradient id="glass" x1="75" y1="60" x2="94" y2="105" gradientUnits="userSpaceOnUse"><stop stop-color="#a6c9ce"/><stop offset="1" stop-color="#263e4a"/></linearGradient></defs>
+  <path d="m13 170 16-28h311v29H13" fill="#304a55"/>
+  <path d="M35 131 55 83 86 73h41l21 15h184l14 15v45H27z" fill="url(#body)" stroke="#385969" stroke-width="2"/>
+  <path d="m56 83 8-27h63l21 32H55" fill="#7398a6"/>
+  <path d="m64 56 12-6h49l9 6z" fill="#2d4855"/>
+  <path d="m65 64-7 18h22l4-18zm27 0-3 18h34l-7-18z" fill="url(#glass)" stroke="#d5ded1" stroke-width="2"/>
+  <path d="m42 104 8-16h28l-8 16z" fill="url(#glass)" stroke="#a5c1c4" stroke-width="2"/>
+  <path d="m129 88 25 1 64 59h-28z" fill="#f2ede4"/>
+  <path d="M153 87h171l-11-8H153z" fill="#aac2c6"/>
+  <rect x="175" y="70" width="29" height="9" rx="3" fill="#2d4855"/>
+  <rect x="245" y="73" width="36" height="6" rx="2" fill="#2d4855"/>
+  <rect x="271" y="100" width="52" height="26" rx="2" fill="#304e5e"/>
+  <path d="M276 105h42m-42 5h42m-42 5h42m-42 5h42" stroke="#7398a6" stroke-width="2"/>
+  <path d="M109 91v46m7-46v46" stroke="#385c6b"/>
+  <path d="M24 150h323v9H24z" fill="#263e4a"/>
+  <path d="M80 147v-22h256v22M80 136h256m-217-11v22m40-22v22m80-22v22m42-22v22m40-22v22" stroke="#d5c49e" stroke-width="2.5"/>
+  <path d="M27 157h28l-9 15H18z" fill="#1f3540"/>
+  <path d="m29 160-4 8m13-8-4 8m13-8-4 8" stroke="#77919a" stroke-width="2"/>
+  <circle cx="46" cy="117" r="5" fill="#eadbb0"/><circle cx="78" cy="53" r="4" fill="#f1dfaa"/>
+  <rect x="60" y="160" width="72" height="16" rx="7" fill="#223946"/><rect x="242" y="160" width="72" height="16" rx="7" fill="#223946"/>
+  <g fill="#263d49" stroke="#7d969d" stroke-width="3"><circle cx="76" cy="176" r="12"/><circle cx="116" cy="176" r="12"/><circle cx="258" cy="176" r="12"/><circle cx="298" cy="176" r="12"/></g>
+  <g fill="#a6b7b6"><circle cx="76" cy="176" r="4"/><circle cx="116" cy="176" r="4"/><circle cx="258" cy="176" r="4"/><circle cx="298" cy="176" r="4"/></g>
+  <path d="M340 161h20" stroke="#263e4a" stroke-width="7"/>
+  <text x="220" y="117" text-anchor="middle" fill="#edf0e3" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">KOUNTR</text>
+</svg>
