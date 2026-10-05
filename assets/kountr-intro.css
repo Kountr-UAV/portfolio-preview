@@ -1,0 +1,214 @@
+/* Clip the transparent margins in the supplied logo without changing the asset. */
+.brand-logo {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 30px;
+  aspect-ratio: 53 / 62;
+  overflow: hidden;
+}
+
+.brand-logo img {
+  width: 181.1321%;
+  max-width: none;
+  height: auto;
+  transform: translateY(-26.7606%);
+}
+
+.wordmark {
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.site-header nav a {
+  white-space: nowrap;
+}
+
+.intro-pending {
+  overflow: hidden;
+}
+
+.intro-pending::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: var(--paper);
+}
+
+.intro-running::before {
+  display: none;
+}
+
+.intro-pending .hero.is-entering {
+  animation-play-state: paused;
+}
+
+.brand-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--paper);
+  color: #171b18;
+  isolation: isolate;
+}
+
+.intro-lockup {
+  position: relative;
+  transform: translateY(-4%);
+}
+
+.intro-word {
+  position: relative;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(72px, 16vw, 220px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.075em;
+  white-space: nowrap;
+}
+
+.intro-letter {
+  position: relative;
+}
+
+.intro-letter > span {
+  display: block;
+  animation: intro-letter .6s cubic-bezier(.22, .7, .2, 1) both;
+  animation-delay: calc(.2s + var(--letter) * .16s);
+}
+
+.intro-letter::before,
+.intro-letter:last-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 120vh;
+  background: #171b1826;
+  transform: translateY(-50%);
+  animation: intro-guides 2s ease both;
+}
+
+.intro-letter:last-child::after {
+  left: 100%;
+}
+
+.intro-word::before,
+.intro-word::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 120vw;
+  height: 1px;
+  background: #171b1826;
+  transform: translateX(-50%);
+  animation: intro-guides 2s ease both;
+}
+
+.intro-word::before {
+  top: .13em;
+}
+
+.intro-word::after {
+  bottom: .16em;
+}
+
+.intro-logo {
+  position: absolute;
+  bottom: calc(100% + 24px);
+  left: 50%;
+  width: clamp(34px, 4vw, 52px);
+  transform: translateX(-50%);
+  animation: intro-detail .55s cubic-bezier(.22, .7, .2, 1) 1.55s both;
+}
+
+.intro-tagline {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  width: max-content;
+  max-width: 90vw;
+  transform: translateX(-50%);
+  font-size: clamp(14px, 2vw, 24px);
+  line-height: 1.4;
+  letter-spacing: -.035em;
+  text-align: center;
+  animation: intro-detail .55s cubic-bezier(.22, .7, .2, 1) 1.65s both;
+}
+
+.intro-skip {
+  position: absolute;
+  right: var(--gutter);
+  bottom: max(24px, env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px 0 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.intro-skip:hover {
+  color: var(--ink);
+}
+
+.brand-intro:not(.is-keyboard) .intro-skip:focus-visible {
+  outline: none;
+}
+
+.brand-intro.is-leaving {
+  pointer-events: none;
+  animation: intro-exit .65s cubic-bezier(.76, 0, .24, 1) both;
+}
+
+@keyframes intro-letter {
+  0% { opacity: 0; color: #999c97; transform: translateY(.18em); }
+  45% { opacity: 1; color: #999c97; transform: translateY(0); }
+  100% { opacity: 1; color: #171b18; transform: translateY(0); }
+}
+
+@keyframes intro-guides {
+  0% { opacity: 0; }
+  20%, 72% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes intro-detail {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes intro-exit {
+  from { clip-path: inset(0 0 0 0); }
+  to { clip-path: inset(0 0 100% 0); }
+}
+
+@media (width <= 599px) {
+  .wordmark { gap: 8px; }
+  .wordmark .brand-logo { width: 26px; }
+  .intro-logo { bottom: calc(100% + 20px); }
+  .intro-tagline { top: calc(100% + 14px); }
+}
+
+@media (width <= 359px) {
+  .site-header { gap: 8px; }
+  .wordmark { gap: 6px; font-size: 24px; }
+  .wordmark .brand-logo { width: 20px; }
+  .site-header nav { gap: 8px; font-size: 11px; }
+  .site-header nav a:last-child { gap: 6px; padding-inline: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-intro,
+  .intro-pending::before { display: none !important; }
+  .intro-pending { overflow: visible; }
+}
