@@ -2,7 +2,7 @@
 
 Prepared for a static HTML portfolio with two Pages Functions. No Astro/Next.js adapter or Node server is needed for the selected public source. No live deployment, account creation, DNS, credentials, persistent access, spending or email action has occurred.
 
-The proposed `wrangler.jsonc` name `kountr-portfolio` is a reviewable placeholder, not evidence of an existing account/project. Parent owns Cloudflare authorization, account/project discovery, safe deployment scope, any credential permissions or charges, PostgreSQL provider choice and backend linkage. No connected Cloudflare plugin/account access was established by this task.
+The proposed `wrangler.jsonc` name `kountr-portfolio` is a reviewable placeholder, not evidence of an existing account/project. Parent owns Cloudflare authorization, account/project discovery, safe deployment scope, any credential permissions or charges, PostgreSQL provider choice and backend linkage. Parent later reported that the user connected Cloudflare and its installed manifest declares executor MCP `cloudflare` at `https://mcp.cloudflare.com/mcp`, with `requires_executor=true`. This runner's current callable tool metadata contains no Cloudflare tools or tool-search capability, and read-only `codex mcp list --json` exits successfully with an empty server list. Consequently no account/zone/project list could be performed here. This is an executor tool-availability blocker, not evidence of failed authorization or a reason to request reconnection. No authentication caches were inspected or copied.
 
 ## Reviewable build settings
 
