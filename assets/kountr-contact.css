@@ -1,0 +1,15 @@
+.field input[type=email]{background:#faf7f0;border:1px solid #767a6f;border-radius:0;width:100%;min-width:0;min-height:46px;padding:12px;font-size:15px}
+.field .field-error,.brief-error{color:#8b3528}
+.field [aria-invalid=true]{border-color:#8b3528}
+.field [aria-invalid=true]:focus-visible{outline:3px solid #405b46;outline-offset:5px}
+.contact-privacy,.contact-status,.contact-fallback{font-size:13px;line-height:1.6}
+.contact-privacy,.contact-fallback,.optional-choice{color:var(--muted)}
+.contact-privacy a,.contact-fallback a,.no-js-note a{text-decoration:underline;text-underline-offset:3px}
+.call-choice{align-items:flex-start}
+.call-choice input{margin-top:3px}
+.brief-button:disabled{opacity:.65;cursor:wait}
+.brief-button:not(:disabled){cursor:pointer}
+.contact-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.contact-fallback{margin-top:20px}
+.brief-fields[aria-busy=true]{cursor:progress}
+#contact-security{min-width:0}

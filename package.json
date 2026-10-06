@@ -1,0 +1,22 @@
+{
+  "name": "kountr-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/contact.test.mjs",
+    "test:browser": "playwright test",
+    "dev": "wrangler pages dev dist --ip 127.0.0.1 --port 8788",
+    "check:cloudflare": "wrangler pages functions build --outdir /tmp/kountr-pages-functions"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "wrangler": "4.148.0"
+  }
+}

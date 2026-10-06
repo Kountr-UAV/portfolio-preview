@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Preparation only. Reconcile this proposed name with the approved Pages project.
+  "name": "kountr-portfolio",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-06",
+  "vars": {
+    "CONTACT_ENABLED": "false"
+  },
+  "env": {
+    "preview": { "vars": { "CONTACT_ENABLED": "false" } },
+    "production": { "vars": { "CONTACT_ENABLED": "false" } }
+  }
+}
